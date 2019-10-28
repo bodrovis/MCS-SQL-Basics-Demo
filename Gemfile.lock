@@ -56,21 +56,16 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.1, >= 2.1.8)
-    bindex (0.8.1)
-    bootsnap (1.4.5)
-      msgpack (~> 1.0)
     builder (3.2.3)
-    byebug (11.0.1)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
     erubi (1.9.0)
+    execjs (2.7.0)
     ffi (1.11.1-x64-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.9.1)
-      activesupport (>= 4.2.0)
     loofah (2.3.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -83,7 +78,6 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.12.2)
-    msgpack (1.3.1-x64-mingw32)
     mysql2 (0.5.2-x64-mingw32)
     nio4r (2.5.2)
     nokogiri (1.10.4-x64-mingw32)
@@ -150,11 +144,8 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2019.3)
       tzinfo (>= 1.0.0)
-    web-console (4.0.1)
-      actionview (>= 6.0.0)
-      activemodel (>= 6.0.0)
-      bindex (>= 0.4.0)
-      railties (>= 6.0.0)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -164,16 +155,13 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  bootsnap (>= 1.4.2)
-  byebug
-  jbuilder (~> 2.7)
   mysql2
   puma (~> 3.11)
   rails (~> 6.0.0)
   sass-rails (~> 5)
   turbolinks (~> 5)
   tzinfo-data
-  web-console (>= 3.3.0)
+  uglifier
 
 RUBY VERSION
    ruby 2.5.7p206
