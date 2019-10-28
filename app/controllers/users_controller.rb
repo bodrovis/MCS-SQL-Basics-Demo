@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     surname = params[:surname]
     age = params[:age]
     city = params[:city]
-    do_query "insert into users (name, surname, age, city) values (#{name}, #{surname}, #{age}, #{city});"
+    do_query "insert into users (name, surname, age, city) values ('#{name}', '#{surname}', #{age}, '#{city}');"
     flash[:success] = 'Пользователь добавлен!'
     redirect_to users_path
   end
