@@ -1,6 +1,6 @@
 <h1>Редактировать пользователя</h1>
 
-<%= form_with url: user_path(@user['id']), data: {method: :patch, remote: false} do %>
+<%= form_with url: user_path(@user['id']), data: {remote: false}, method: :patch do %>
   <div>
     <%= label_tag 'name', 'Имя' %>
     <%= text_field_tag 'name', @user['name'], placeholder: 'Вася' %>
