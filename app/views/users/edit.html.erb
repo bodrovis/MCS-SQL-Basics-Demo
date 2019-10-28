@@ -1,0 +1,25 @@
+<h1>Редактировать пользователя</h1>
+
+<%= form_with url: user_path(@user['id']), method: :patch do %>
+  <div>
+    <%= label_tag 'name', 'Имя' %>
+    <%= text_field_tag 'name', @user['name'], placeholder: 'Вася' %>
+  </div>
+
+  <div>
+    <%= label_tag 'surname', 'Фамилия' %>
+    <%= text_field_tag 'surname', @user['surname'], placeholder: 'Пупкин' %>
+  </div>
+
+  <div>
+    <%= label_tag 'age', 'Возраст' %>
+    <%= text_field_tag 'age', @user['age'], placeholder: '33' %>
+  </div>
+
+  <div>
+    <%= label_tag 'city', 'Город' %>
+    <%= text_field_tag 'city', @user['city'], placeholder: 'Москва' %>
+  </div>
+
+  <%= submit_tag 'Редактировать!' %>
+<% end %>

@@ -1,0 +1,11 @@
+<h1>Все пользователи</h1>
+
+<% @users.each do |user| %>
+  <%= user['name'] %> <%= user['surname'] %>
+  (возраст <%= user['age'] %>, город <%= user['city'] %>)
+
+  <%= link_to 'Редактировать', edit_user_path(user['id']) %><br>
+  <%= link_to 'Удалить', user_path(user['id']),
+              data: {confirm: 'Вы уверены?', method: :delete} %>
+  <hr>
+<% end %>
