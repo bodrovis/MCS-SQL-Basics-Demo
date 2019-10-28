@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>SocialNetwork</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<header>
+  "Основы SQL" на сайте Moscow Coding School
+
+  <ul>
+    <li><a href="#">Создать пользователя</a></li>
+    <li><a href="#">Все пользователи</a></li>
+    <li><a href="#">Что-то ещё</a></li>
+  </ul>
+</header>
+
+<div>
+  <strong>Здесь</strong> после успешных или неуспешных действий (например, создание юзера) может быть выведено сообщение в духе "Пользователь создан!".
+</div>
+
+<%= yield %>
+
+<footer>
+  &copy; MCS 2019
+</footer>
+
+</body>
+</html>
