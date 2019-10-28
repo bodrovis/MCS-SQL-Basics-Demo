@@ -1,6 +1,6 @@
 <h1>Новый пользователь</h1>
 
-<%= form_with url: users_path do %>
+<%= form_with url: users_path, data: {remote: false} do %>
   <div>
     <%= label_tag 'name', 'Имя' %>
     <%= text_field_tag 'name', params[:name], placeholder: 'Вася' %>
