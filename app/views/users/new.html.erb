@@ -1,25 +1,47 @@
-<h1>Новый пользователь</h1>
+<h1 class="main-title">
+  Новый пользователь
+</h1>
 
 <%= form_with url: users_path, data: {remote: false} do %>
-  <div>
-    <%= label_tag 'name', 'Имя' %>
-    <%= text_field_tag 'name', params[:name], placeholder: 'Вася' %>
+  <div class="form-group row">
+    <div class="col-3">
+      <%= label_tag 'name', 'Имя', class: 'custom-label' %>
+    </div>
+
+    <div class="col-9">
+      <%= text_field_tag 'name', params[:name], placeholder: 'Вася', class: 'custom-input' %>
+    </div>
   </div>
 
-  <div>
-    <%= label_tag 'surname', 'Фамилия' %>
-    <%= text_field_tag 'surname', params[:surname], placeholder: 'Пупкин' %>
+  <div class="form-group row">
+    <div class="col-3">
+      <%= label_tag 'surname', 'Фамилия', class: 'custom-label' %>
+    </div>
+
+    <div class="col-9">
+      <%= text_field_tag 'surname', params[:surname], placeholder: 'Пупкин', class: 'custom-input' %>
+    </div>
   </div>
 
-  <div>
-    <%= label_tag 'age', 'Возраст' %>
-    <%= text_field_tag 'age', params[:age], placeholder: '33' %>
+  <div class="form-group row">
+    <div class="col-3">
+      <%= label_tag 'age', 'Возраст', class: 'custom-label' %>
+    </div>
+
+    <div class="col-9">
+      <%= text_field_tag 'age', params[:age], placeholder: '33', class: 'custom-input' %>
+    </div>
   </div>
 
-  <div>
-    <%= label_tag 'city', 'Город' %>
-    <%= text_field_tag 'city', params[:city], placeholder: 'Москва' %>
+  <div class="form-group row">
+    <div class="col-3">
+      <%= label_tag 'city', 'Город', class: 'custom-label' %>
+    </div>
+
+    <div class="col-9">
+      <%= text_field_tag 'city', params[:city], placeholder: 'Москва', class: 'custom-input' %>
+    </div>
   </div>
 
-  <%= submit_tag 'Создать!' %>
+  <%= submit_tag 'Создать!', class: 'btn btn-primary btn-block mt-4' %>
 <% end %>

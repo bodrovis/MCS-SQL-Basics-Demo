@@ -1,0 +1,100 @@
+@mixin black_block {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #000 !important;
+  color: #fff;
+  padding: 0.8rem 0.5rem 0.5rem 0.5rem !important;
+  border: 1px solid #fff !important;
+  box-shadow: 0 2px 3px #000 !important;
+  text-transform: uppercase;
+}
+
+@mixin white_block {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #fff !important;
+  color: #000;
+  padding: 0.8rem 0.5rem 0.5rem 0.5rem !important;
+  border: 1px solid #000 !important;
+  box-shadow: 0 2px 3px #000 !important;
+  text-transform: uppercase;
+}
+
+html {
+  background-image: linear-gradient(#F0FFF0 0%,
+          rgba(245, 255, 250, 0.78) 39.58%,
+          rgba(255, 228, 196, 0.5885) 63.02%,
+          #FF6347 100%);
+  min-height: 100%;
+  min-width: 320px;
+}
+
+body {
+  background-color: transparent;
+}
+
+@media (max-width: 400px) {
+  html, body {font-size: 12px !important;}
+}
+
+.alert {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.navbar {
+  &.bg-light {
+    background-color: transparent !important;
+  }
+  .navbar-brand {
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+    &:link, &:hover, &:visited, &:active {
+      color: #000;
+    }
+  }
+}
+
+footer {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.main-title {
+  @include black_block();
+  margin-bottom: 1.5rem;
+}
+
+.btn.btn-primary  {
+  &, &:active, &:focus, &:hover {
+    @include black_block();
+  }
+}
+
+.custom-input {
+  @include white_block();
+  width: 100%;
+}
+
+.custom-label {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0.8rem 0.5rem 0.5rem 0 !important;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.user-data {
+  @include white_block();
+  margin-top: 1.5rem;
+  &:first-of-type {
+    margin-top: 0;
+  }
+}

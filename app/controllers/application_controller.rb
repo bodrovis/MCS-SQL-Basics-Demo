@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
 
   def sql_error(e)
     flash[:warning] = e.message
-    redirect_to root_path
+    redirect_back fallback_location: root_path
   end
 end

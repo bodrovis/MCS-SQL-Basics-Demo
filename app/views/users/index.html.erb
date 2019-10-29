@@ -1,11 +1,35 @@
-<h1>Все пользователи</h1>
+<h1 class="main-title">Все пользователи</h1>
+
+<%= form_with url: users_path, data: {remote: false}, method: :get, class: 'my-5 px-5' do %>
+  <div class="form-group row">
+    <div class="col-3">
+      <%= label_tag 'language_id', 'Язык', class: 'custom-label' %>
+    </div>
+
+    <div class="col-9">
+      <%= select_tag 'language_id', language_options(params[:language_id], @languages),
+                     class: 'custom-input',
+                     prompt: 'Выберите язык' %>
+    </div>
+  </div>
+
+  <%= submit_tag 'Найти единомышленников!', class: 'btn btn-primary btn-block mt-4' %>
+<% end %>
 
 <% @users.each do |user| %>
-  <%= user['name'] %> <%= user['surname'] %>
-  (возраст <%= user['age'] %>, город <%= user['city'] %>)
+  <div class="user-data">
+    <%= user['name'] %> <%= user['surname'] %>
+    (возраст <%= user['age'] %>, город <%= user['city'] %>)
+  </div>
 
-  <%= link_to 'Редактировать', edit_user_path(user['id']) %><br>
-  <%= link_to 'Удалить', user_path(user['id']),
-              data: {confirm: 'Вы уверены?', method: :delete} %>
-  <hr>
+  <div class="row mt-3">
+    <div class="col">
+      <%= link_to 'Редактировать', edit_user_path(user['id']), class: 'btn btn-primary btn-block' %>
+    </div>
+    <div class="col">
+      <%= link_to 'Удалить', user_path(user['id']),
+                  data: {confirm: 'Вы уверены?', method: :delete},
+                  class: 'btn btn-primary btn-block' %>
+    </div>
+  </div>
 <% end %>
