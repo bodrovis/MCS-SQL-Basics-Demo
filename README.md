@@ -1,24 +1,7 @@
-# README
+# Курс "Основы SQL" (Moscow Coding School)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Данное приложение демонстрирует практическое использование запросов SQL в web-приложениях. Обратите внимание, что программный код значительно упрощён и использование его в реальных проектах не рекомендуется! 
 
-Things you may want to cover:
+Примеры запросов можно увидеть [здесь](https://github.com/bodrovis/MCS-SQL-Basics-Demo/blob/master/app/controllers/users_controller.rb).
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+(c) 2019 [Moscow Coding School](https://moscoding.ru), [Ilya Bodrov-Krukowski](http://bodrovis.tech/)
