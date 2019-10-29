@@ -12,7 +12,7 @@
 
 * [https://git-scm.com/downloads](https://git-scm.com/downloads) - есть для всех ОС
 
-[Интерпретатор Ruby](https://www.ruby-lang.org/en/downloads/):
+[Интерпретатор Ruby](https://www.ruby-lang.org/en/downloads/) не ниже, чем версия 2.5:
 
 * На Linux и Mac выполняются команды в терминале:
   + `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`
@@ -32,9 +32,12 @@
 * Открыть терминал
 * `git clone https://github.com/bodrovis/MCS-SQL-Basics-Demo.git` (скачиваем себе код приложения)
 * `cd MCS-SQL-Basics-Demo` (переходим в директорию приложения)
-* `bundle install` (устанавливаем зависимости)
+* `bundle install` (устанавливаем зависимости). Если данная команда не проходит, запустите:
+  + `gem update --system`
+  + `gem install bundler`
+  + Попробуйте запустить `bundle install` ещё раз
 * Открываем файл `config/database.yml` в любом текстовом редакторе и [указываем имя базы данных, имя пользователя и пароль для подключения к MySQL](https://github.com/bodrovis/MCS-SQL-Basics-Demo/blob/master/config/database.yml#L9) (опции `database`, `username` и `password` соответственно)
-* Сервер MySQL должен быть запущен, а выбранная база данных должна быть пустой, иначе возможны конфликты между создаваемыми и существующими таблицами
+* Сервер MySQL должен быть запущен, а выбранная база данных должна быть пустой (не забудьте её создать!), иначе возможны конфликты между создаваемыми и существующими таблицами
 * `rails db:migrate` (создаются нужные таблицы)
 * `rails s` (запускается сервер)
 * В браузере перейдите по адресу `http://localhost:3000`
