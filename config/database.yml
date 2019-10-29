@@ -9,7 +9,7 @@ development:
   database: social_network
   pool: 5
   username: root
-  password: omglol
+  password:
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
