@@ -6,7 +6,7 @@ ruby '2.5.7'
 gem 'rails', '~> 6.0.0'
 gem 'mysql2'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.2'
 
 gem 'sassc-rails'
 gem 'uglifier'

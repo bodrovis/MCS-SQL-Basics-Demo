@@ -15,9 +15,11 @@
 [Интерпретатор Ruby](https://www.ruby-lang.org/en/downloads/) не ниже, чем версия 2.5:
 
 * На Linux и Mac выполняются команды в терминале:
+  + `sudo xcode-select --install` - для MacOS, если Xcode ещё не установлен (если он установлен, то команда об этом сообщит)
   + `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`
-  + `curl -sSL https://get.rvm.io | bash`
-  + `curl -sSL https://get.rvm.io | bash -s stable --ruby`
+  + Если на MacOS возвращается ошибка вида `gpg command not found`, то нужно установить gpg: `brew install gnupg gnupg2`
+  + `curl -sSL https://get.rvm.io | bash` - установит RVM
+  + `curl -sSL https://get.rvm.io | bash -s stable --ruby` - установит свежую версию Ruby
   + После чего `ruby -v` должно вернуть текущую версию Ruby. Подробности можно найти [на сайте RVM](https://rvm.io/rvm/install).
 * На Windows:
   + [Скачать Ruby+DevKit](https://rubyinstaller.org/downloads/) (рекомендуемая версия выделена полужирным текстом)
