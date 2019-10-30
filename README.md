@@ -41,6 +41,7 @@
 * Открываем файл `config/database.yml` в любом текстовом редакторе и [указываем имя базы данных, имя пользователя и пароль для подключения к MySQL](https://github.com/bodrovis/MCS-SQL-Basics-Demo/blob/master/config/database.yml#L9) (опции `database`, `username` и `password` соответственно)
 * Сервер MySQL должен быть запущен, а выбранная база данных должна быть пустой (не забудьте её создать!), иначе возможны конфликты между создаваемыми и существующими таблицами
 * `rails db:migrate` (создаются нужные таблицы)
+  + Если вы видите ошибку `Authentication plugin 'caching_sha2_password' cannot be loaded`, то откройте консоль MySQL и выполните команду вида `ALTER USER 'yourusername'@'localhost' IDENTIFIED WITH mysql_native_password BY 'youpassword';` (замените `yourusername` и `youpassword` вашим пользователем и паролем соответственно)
 * `rails s` (запускается сервер)
 * В браузере перейдите по адресу `http://localhost:3000`
 * Вы должны увидеть web-приложение
